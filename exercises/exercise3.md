@@ -8,7 +8,10 @@ curl -s http://localhost:4000/api/ships/amundsen
 
 :trophy: Extend your application to perform a search when the user presses enter. List the result below the search bar, as shown below.
 
+:bulb: You'll need to enable CORS in express (server)
+
 ![Exercise 3](./images/exercise3.svg)
+
 
 
 ## Troubleshooting

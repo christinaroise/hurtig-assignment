@@ -1,0 +1,30 @@
+.search-box {
+    position: relative;
+    display: flex;
+    width: 293px;
+    border: 1px solid #666666;
+    padding: 0.9rem 0.5rem 0.9rem 1rem;
+}
+
+.search-input-value {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: gray;
+    font-size: 1.2rem;
+    font-weight: 300;
+    /* font-weight less than 400 not showing in Chrome */
+}
+
+.search-button {
+    border: none;
+    background-color: transparent;
+}
+
+.search-button:hover{
+    cursor: pointer;
+}
+
+.search-button:focus {
+    outline: none;
+}

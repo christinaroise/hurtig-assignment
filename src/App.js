@@ -2,8 +2,13 @@ import React from 'react';
 import SearchBar from './components/SearchBar.js';
 
 function App() {
+
   return (
-    <SearchBar/>
+    <div className="page-wrapper">
+      <div className="container">
+        <SearchBar/>
+      </div>
+    </div>
   );
 }
 

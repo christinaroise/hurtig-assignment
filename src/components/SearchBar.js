@@ -4,9 +4,9 @@ import { ReactComponent as MagnifyingGlass } from '../assets/magnifying-glass.sv
 
 const SearchBar = (props) => {
     return (
-        <div class="search-box">
-            <input className="search-input-value" type="text" autoComplete="off" value={props.inputValue} onChange={props.onChangeValue} placeholder="Search"/>
-            <button className="search-button" type="submit"><MagnifyingGlass/></button>
+        <div className="search-box">
+            <input className="search-input-value" type="text" autoComplete="off" value={props.inputValue} onChange={props.onChange} placeholder="Search"/>
+    <button className="search-button" type="submit" onClick={props.onSearchClick}><MagnifyingGlass/></button>
         </div>
     );
 };

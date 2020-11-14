@@ -1,9 +1,11 @@
 .search-box {
-    position: relative;
+    /* I have not assigned a fixed width to .search-box as the idea is that it will fill the width (100%) of the container it is placed in. */
     display: flex;
-    width: 293px;
     border: 1px solid #666666;
-    padding: 0.9rem 0.5rem 0.9rem 1rem;
+    padding: 0.9rem 0.5rem;
+    padding-left: 1rem;
+    margin: 1rem;
+    background-color: white;
 }
 
 .search-input-value {
@@ -13,7 +15,7 @@
     color: gray;
     font-size: 1.2rem;
     font-weight: 300;
-    /* font-weight less than 400 not showing in Chrome */
+    /* font-weight less than 400 not showing in Chrome, but a quick inspect says the font-weight is assigned. */
 }
 
 .search-button {

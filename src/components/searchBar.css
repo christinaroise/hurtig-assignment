@@ -13,6 +13,7 @@
     border: none;
     outline: none;
     color: gray;
+    background-color: white;
     font-size: 1.2rem;
     font-weight: 300;
     /* font-weight less than 400 not showing in Chrome, but a quick inspect says the font-weight is assigned. */
@@ -20,7 +21,7 @@
 
 .search-button {
     border: none;
-    background-color: transparent;
+    background-color: white!important;
 }
 
 .search-button:hover{

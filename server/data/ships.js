@@ -76,7 +76,7 @@ module.exports = [
     },
     {
         id: 'VA',
-        name: 'MS Vester�len',
+        name: 'MS Vesterølen',
         url: 'hurtigruten.no/skip/ms-vesteralen/'
     }
 ];

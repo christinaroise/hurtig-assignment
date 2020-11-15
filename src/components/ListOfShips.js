@@ -4,7 +4,6 @@ import './listOfShips.css';
 
 const ListOfShips = (props) => {
   const [ships, setShips] = useState([])
-
   const shipsURL = `http://localhost:4000/api/ships/` + props.shipName;
 
   useEffect(() => {

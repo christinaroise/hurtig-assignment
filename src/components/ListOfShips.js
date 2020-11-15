@@ -5,12 +5,15 @@ import './listOfShips.css';
 const ListOfShips = (props) => {
   const [ships, setShips] = useState([])
 
+  const shipsURL = `http://localhost:4000/api/ships/` + props.shipName;
+
   useEffect(() => {
-    const shipsURL = `http://localhost:4000/api/ships/` + props.shipName;
+    let isMounted = true; 
     ApiService.getData(shipsURL).then(res => {
-      setShips(res.data); 
+      if (isMounted) setShips(res.data); 
     });
-  }, [])
+    return () => { isMounted = false };
+  }, [ships])
 
   return (
     <div>

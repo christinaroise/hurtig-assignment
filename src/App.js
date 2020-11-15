@@ -3,23 +3,25 @@ import SearchBar from './components/SearchBar.js';
 import ListOfShips from './components/ListOfShips.js';
 
 function App() {
-  const [inputValue, setInputValue] = useState("")
+  const [searchValue, setSearchValue] = useState("")
+  
   const searchCallback = (value) => {
     if(value === ""){
-      setInputValue("")
+      setSearchValue("")
     }else{
-      setInputValue(value)
+      setSearchValue(value)
       console.log('Search value is: ' + value)
     }
   }
+
 
   return ( 
     <div className="page-wrapper">
       <div className="container">
         <SearchBar parentCallback={searchCallback}/>
-        {inputValue.length > 0
+        {searchValue.length > 0
           ? <ListOfShips
-          shipName={inputValue}/>
+          shipName={searchValue}/>
           : null 
         }
       </div>

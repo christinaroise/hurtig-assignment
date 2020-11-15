@@ -11,6 +11,7 @@ const SearchBar = ({ parentCallback })  =>{
     let search = () => {
         if(inputValue === ""){
             console.log('You cannot search EMPTY')
+            // insert code for alert.message here
         }else{
             setSearchClicked(!searchClicked);
             setIcon( searchClicked ? <MagnifyingGlass/> : <Exit/>);

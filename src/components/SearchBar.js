@@ -18,8 +18,9 @@ const SearchBar = ({ parentCallback })  =>{
             if(searchClicked){
                 setInputValue("");
                 console.log('Input Value was cleaned out')
+                parentCallback(""); 
             }else{
-                parentCallback(inputValue);
+                parentCallback(inputValue); 
             }
         }
     }

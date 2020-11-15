@@ -3,27 +3,30 @@ import './searchBar.css';
 import { ReactComponent as MagnifyingGlass } from '../assets/magnifying-glass.svg';
 import { ReactComponent as Exit } from '../assets/cross.svg';
 
-const SearchBar = (props) =>{
-    let [icon, setIcon] = useState(<MagnifyingGlass/>)
-    let [buttonClicked, setButtonClicked] = useState(false)
+const SearchBar = ({ parentCallback })  =>{
+    let [icon, setIcon] = useState(<MagnifyingGlass/>);
+    let [searchClicked, setSearchClicked] = useState(false);
+    let [inputValue, setInputValue] = useState("");
 
-    const onClickSearch = () => {
-        setButtonClicked(!buttonClicked)
-        if(!buttonClicked){
-            setIcon(<Exit/>)
+    let search = () => {
+        if(inputValue === ""){
+            console.log('You cannot search EMPTY')
         }else{
-            setIcon(<MagnifyingGlass/>)
+            setSearchClicked(!searchClicked);
+            setIcon( searchClicked ? <MagnifyingGlass/> : <Exit/>);
+            if(searchClicked){
+                setInputValue("");
+                console.log('Input Value was cleaned out')
+            }else{
+                parentCallback(inputValue);
+            }
         }
-    }
-
-    function test (){
-        console.log('test')
     }
 
     return (
         <div className="search-box">
-            <input className="search-input-value" type="text" autoComplete="off" value={props.inputValue} onChange={props.onChange} placeholder="Search"/>
-            <button className="search-button" type="submit" onClick={() => {onClickSearch()}}>{icon}</button>
+            <input className="search-input-value" type="text" autoComplete="off" value={inputValue} onChange={e => setInputValue(e.target.value)} placeholder="Search"/>
+            <button className="search-button" type="submit" onClick={() => {search()}}>{icon}</button>
         </div>
     );
 };
